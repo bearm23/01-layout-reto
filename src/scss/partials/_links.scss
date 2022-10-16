@@ -1,0 +1,10 @@
+@use "variables/colors" as color;
+
+a {
+    text-decoration: none;
+
+    &,
+    &:visited {
+        color: color.$text;
+    }
+}
