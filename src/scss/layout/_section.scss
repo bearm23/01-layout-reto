@@ -1,0 +1,68 @@
+@use "variables/breakpoints" as *;
+@use "variables/spacing" as *;
+@use "partials/counter";
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2px;
+
+    article {
+        flex: 1;
+        display: inherit;
+        min-width: 100%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &.top article:nth-child(4),
+    &.top article:nth-child(5) {
+        display: none;
+    }
+
+    @media screen and (min-width: $breakpoint-sm) {
+        article {
+            min-width: 250px;
+            cursor: pointer;
+        }
+
+        &.top article {
+            min-width: initial;
+        }
+    }
+
+    @media screen and (min-width: $breakpoint-md) {
+        &.top article {
+            min-width: 225px;
+        }
+    }
+
+    @media screen and (min-width: $breakpoint-lg) {
+
+        &.top article:nth-child(4),
+        &.top article:nth-child(5) {
+            display: inline-block;
+        }
+
+        article {
+            min-width: initial;
+        }
+
+        &:not(.top) article {
+            pointer-events: none;
+            padding: $spacing-lg 0;
+
+            img {
+                pointer-events: auto;
+            }
+
+            &:hover {
+                min-width: fit-content;
+                padding: 0;
+            }
+        }
+    }
+}

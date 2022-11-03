@@ -2,9 +2,5 @@
 
 @use "layout/body";
 @use "layout/header";
-@use "layout/nav";
 @use "layout/main";
-@use "layout/footer";
-
-@use "partials/inputs";
-@use "partials/users";
+@use "layout/section";

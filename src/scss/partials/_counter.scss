@@ -1,0 +1,13 @@
+@use "variables/breakpoints" as *;
+
+#top-text {
+    font-weight: 600;
+
+    &:before {
+        content: '3';
+
+        @media screen and (min-width: $breakpoint-lg) {
+            content: '5';
+        }
+    }
+}

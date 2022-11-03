@@ -1,7 +1,0 @@
-@use "variables/colors" as color;
-
-footer {
-    font-size: 13px;
-    background-color: rgba(color.$theme, .2);
-    padding: 20px;
-}
